@@ -10,6 +10,8 @@ public class BattleEntity : MonoBehaviour
     private WaveMovement waveMovement;
     [SerializeField]
     private float currentHealth;
+    public GameObject[] damageSounds;
+    public GameObject deathSound;
 
     void Start()
     {
@@ -21,11 +23,18 @@ public class BattleEntity : MonoBehaviour
     public IEnumerator TakeDamage(int damage)
     {
         currentHealth -= damage;
+        PlayDamageSound();
         yield return waveMovement.StartCoroutine("Play");
         if (currentHealth <= 0)
         {
             StartCoroutine("Death");
         }
+    }
+
+    public IEnumerator Heal(int amount)
+    {
+        currentHealth = currentHealth + amount > maxHealth ? maxHealth : currentHealth + amount;
+        yield return new WaitForEndOfFrame();
     }
 
     public IEnumerator Movement(Vector3 target, float speed)
@@ -41,8 +50,14 @@ public class BattleEntity : MonoBehaviour
     public IEnumerator Death()
     {
         yield return new WaitForSeconds(0.25f);
+        Instantiate(deathSound);
         gameObject.SetActive(false);
         yield return new WaitForEndOfFrame();
     }
 
+    public void PlayDamageSound()
+    {
+        int r = Random.Range(0, damageSounds.Length);
+        Instantiate(damageSounds[r]);
+    }
 }

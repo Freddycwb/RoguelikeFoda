@@ -6,18 +6,18 @@ public class BattleController : MonoBehaviour
 {
     private BattleEntity player;
 
-    public GameEvent StartBattle;
     public GameEvent EndBattle;
     public GameEvent StartTurn;
     public GameEvent EndTurn;
+    public GameEvent EndAttack;
     public GameEvent PlayerDeath;
     public GameObjectVariable Player;
+    public GameObjectVariable Attacker;
     public GameObjectVariable CurrentRoom;
     public List<BattleEntity> enemies = new List<BattleEntity>();
 
     public void CallStartBattle()
     {
-        StartBattle.Raise();
         enemies = CurrentRoom.Value.GetComponent<Room>().enemiesBattleEntitys;
         player = Player.Value.GetComponent<BattleEntity>();
     }
@@ -44,12 +44,14 @@ public class BattleController : MonoBehaviour
 
     public IEnumerator PlayerAction()
     {
+        Attacker.Value = player.gameObject;
         Vector3 lastPos = player.transform.position;
         yield return player.Movement(lastPos + (Vector3.right * 0.8f) + (Vector3.up * 0.4f), 7);
         yield return new WaitForSeconds(0.1f);
         yield return player.weapon.Attack(enemies);
         yield return new WaitForSeconds(0.1f);
         yield return player.Movement(lastPos, 5);
+        EndAttack.Raise();
     }
 
     public IEnumerator EnemysAction()
@@ -64,6 +66,7 @@ public class BattleController : MonoBehaviour
                 continue;
             }
             enemiesAlive.Add(e);
+            Attacker.Value = e.gameObject;
             Vector3 lastPos = e.transform.position;
             yield return e.Movement(lastPos + (Vector3.left * 0.8f) + (Vector3.down * 0.4f), 7);
             yield return new WaitForSeconds(0.1f);
@@ -71,6 +74,7 @@ public class BattleController : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             yield return e.Movement(lastPos, 5);
             yield return new WaitForSeconds(0.4f);
+            EndAttack.Raise();
             if (CheckEndBattle())
             {
                 break;

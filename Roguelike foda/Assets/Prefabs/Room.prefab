@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 223369994210615991}
   - component: {fileID: 223369994210615990}
   m_Layer: 0
-  m_Name: RoomTiles_1 (17)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 36
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369994210615990
 SpriteRenderer:
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 223369994219611330}
   - component: {fileID: 223369994219611331}
   m_Layer: 0
-  m_Name: RoomTiles_2
+  m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,7 +114,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 20
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369994219611331
 SpriteRenderer:
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 223369994236919163}
   - component: {fileID: 223369994236919156}
   m_Layer: 0
-  m_Name: RoomTiles_1 (15)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 223369994266042407}
   - component: {fileID: 223369994266042406}
   m_Layer: 0
-  m_Name: RoomTiles_1 (23)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -282,7 +282,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 42
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369994266042406
 SpriteRenderer:
@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 223369994317899653}
   - component: {fileID: 223369994317899654}
   m_Layer: 0
-  m_Name: RoomTiles_1 (1)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 223369994360563156}
   - component: {fileID: 223369994360563157}
   m_Layer: 0
-  m_Name: RoomTiles_3 (3)
+  m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -450,7 +450,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 19
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369994360563157
 SpriteRenderer:
@@ -553,174 +553,6 @@ MonoBehaviour:
   enemiesGameObject: []
   enemiesOrder: []
   cameFromRight: 1
---- !u!1 &223369994415127044
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 223369994415127050}
-  - component: {fileID: 223369994415127051}
-  m_Layer: 0
-  m_Name: RoomTiles_0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &223369994415127050
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223369994415127044}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.8, y: -1.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &223369994415127051
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223369994415127044}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 18
-  m_Sprite: {fileID: 344582900, guid: af908ec3812a745409c036d66a91b6e1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.2, y: 3.2}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &223369994417880751
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 223369994417880749}
-  - component: {fileID: 223369994417880750}
-  m_Layer: 0
-  m_Name: RoomTiles_0 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &223369994417880749
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223369994417880751}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2, y: -2.2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &223369994417880750
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223369994417880751}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 19
-  m_Sprite: {fileID: 344582900, guid: af908ec3812a745409c036d66a91b6e1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.2, y: 3.2}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &223369994430318432
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,7 +564,7 @@ GameObject:
   - component: {fileID: 223369994430318439}
   - component: {fileID: 223369994430318438}
   m_Layer: 0
-  m_Name: RoomTiles_3 (7)
+  m_Name: UpRightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -751,7 +583,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 30
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369994430318438
 SpriteRenderer:
@@ -816,7 +648,7 @@ GameObject:
   - component: {fileID: 223369994509597464}
   - component: {fileID: 223369994509597471}
   m_Layer: 0
-  m_Name: RoomTiles_2 (9)
+  m_Name: UpLeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -835,7 +667,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 47
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369994509597471
 SpriteRenderer:
@@ -900,7 +732,7 @@ GameObject:
   - component: {fileID: 223369994558482387}
   - component: {fileID: 223369994558482412}
   m_Layer: 0
-  m_Name: RoomTiles_1 (8)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -984,7 +816,7 @@ GameObject:
   - component: {fileID: 223369994614485122}
   - component: {fileID: 223369994614485123}
   m_Layer: 0
-  m_Name: RoomTiles_1 (9)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1068,7 +900,7 @@ GameObject:
   - component: {fileID: 223369994638018179}
   - component: {fileID: 223369994638018204}
   m_Layer: 0
-  m_Name: RoomTiles_2 (1)
+  m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1087,7 +919,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 21
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369994638018204
 SpriteRenderer:
@@ -1152,7 +984,7 @@ GameObject:
   - component: {fileID: 223369994687585216}
   - component: {fileID: 223369994687585223}
   m_Layer: 0
-  m_Name: RoomTiles_1 (22)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1171,7 +1003,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 41
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369994687585223
 SpriteRenderer:
@@ -1236,7 +1068,7 @@ GameObject:
   - component: {fileID: 223369994691666724}
   - component: {fileID: 223369994691666731}
   m_Layer: 0
-  m_Name: RoomTiles_3 (9)
+  m_Name: UpRightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1255,7 +1087,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 46
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369994691666731
 SpriteRenderer:
@@ -1320,7 +1152,7 @@ GameObject:
   - component: {fileID: 223369994717147765}
   - component: {fileID: 223369994717147764}
   m_Layer: 0
-  m_Name: RoomTiles_2 (8)
+  m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1339,7 +1171,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 45
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369994717147764
 SpriteRenderer:
@@ -1404,7 +1236,7 @@ GameObject:
   - component: {fileID: 223369994720274895}
   - component: {fileID: 223369994720274888}
   m_Layer: 0
-  m_Name: RoomTiles_1 (5)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1488,7 +1320,7 @@ GameObject:
   - component: {fileID: 223369994748420808}
   - component: {fileID: 223369994748420815}
   m_Layer: 0
-  m_Name: RoomTiles_1 (19)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1507,7 +1339,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 38
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369994748420815
 SpriteRenderer:
@@ -1561,90 +1393,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &223369994910753790
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 223369994910753788}
-  - component: {fileID: 223369994910753789}
-  m_Layer: 0
-  m_Name: RoomTiles_0 (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &223369994910753788
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223369994910753790}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.2, y: -0.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 26
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &223369994910753789
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223369994910753790}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 17
-  m_Sprite: {fileID: 344582900, guid: af908ec3812a745409c036d66a91b6e1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.2, y: 3.2}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &223369994928644419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,7 +1404,7 @@ GameObject:
   - component: {fileID: 223369994928644418}
   - component: {fileID: 223369994928644417}
   m_Layer: 0
-  m_Name: RoomTiles_1 (21)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1675,7 +1423,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 40
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369994928644417
 SpriteRenderer:
@@ -1740,7 +1488,7 @@ GameObject:
   - component: {fileID: 223369994943087508}
   - component: {fileID: 223369994943087509}
   m_Layer: 0
-  m_Name: RoomTiles_3 (1)
+  m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1759,7 +1507,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 17
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369994943087509
 SpriteRenderer:
@@ -1824,7 +1572,7 @@ GameObject:
   - component: {fileID: 223369994946309035}
   - component: {fileID: 223369994946309028}
   m_Layer: 0
-  m_Name: RoomTiles_1 (10)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1908,7 +1656,7 @@ GameObject:
   - component: {fileID: 223369994964742585}
   - component: {fileID: 223369994964742586}
   m_Layer: 0
-  m_Name: RoomTiles_1 (11)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1992,7 +1740,7 @@ GameObject:
   - component: {fileID: 223369994967092407}
   - component: {fileID: 223369994967092400}
   m_Layer: 0
-  m_Name: RoomTiles_1 (14)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2076,7 +1824,7 @@ GameObject:
   - component: {fileID: 223369994981206379}
   - component: {fileID: 223369994981206372}
   m_Layer: 0
-  m_Name: RoomTiles_1 (12)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2160,7 +1908,7 @@ GameObject:
   - component: {fileID: 223369994993290028}
   - component: {fileID: 223369994993290003}
   m_Layer: 0
-  m_Name: RoomTiles_2 (5)
+  m_Name: UpLeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2179,7 +1927,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 32
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369994993290003
 SpriteRenderer:
@@ -2244,7 +1992,7 @@ GameObject:
   - component: {fileID: 223369995013910720}
   - component: {fileID: 223369995013910721}
   m_Layer: 0
-  m_Name: RoomTiles_1 (7)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2328,7 +2076,7 @@ GameObject:
   - component: {fileID: 223369995042253725}
   - component: {fileID: 223369995042253726}
   m_Layer: 0
-  m_Name: RoomTiles_1
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2412,7 +2160,7 @@ GameObject:
   - component: {fileID: 223369995092156450}
   - component: {fileID: 223369995092156449}
   m_Layer: 0
-  m_Name: RoomTiles_2 (7)
+  m_Name: UpLeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2431,7 +2179,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 34
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369995092156449
 SpriteRenderer:
@@ -2496,7 +2244,7 @@ GameObject:
   - component: {fileID: 223369995106583593}
   - component: {fileID: 223369995106583594}
   m_Layer: 0
-  m_Name: RoomTiles_2 (3)
+  m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2515,7 +2263,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 23
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369995106583594
 SpriteRenderer:
@@ -2580,7 +2328,7 @@ GameObject:
   - component: {fileID: 223369995144157778}
   - component: {fileID: 223369995144157779}
   m_Layer: 0
-  m_Name: RoomTiles_1 (4)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2664,7 +2412,7 @@ GameObject:
   - component: {fileID: 223369995191361283}
   - component: {fileID: 223369995191361308}
   m_Layer: 0
-  m_Name: RoomTiles_1 (2)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2748,7 +2496,7 @@ GameObject:
   - component: {fileID: 223369995275946572}
   - component: {fileID: 223369995275946573}
   m_Layer: 0
-  m_Name: RoomTiles_1 (3)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2832,7 +2580,7 @@ GameObject:
   - component: {fileID: 223369995384765363}
   - component: {fileID: 223369995384765362}
   m_Layer: 0
-  m_Name: RoomTiles_1 (16)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2851,7 +2599,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 35
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369995384765362
 SpriteRenderer:
@@ -2916,7 +2664,7 @@ GameObject:
   - component: {fileID: 223369995418717414}
   - component: {fileID: 223369995418717413}
   m_Layer: 0
-  m_Name: RoomTiles_1 (20)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2935,7 +2683,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 39
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369995418717413
 SpriteRenderer:
@@ -3000,7 +2748,7 @@ GameObject:
   - component: {fileID: 223369995439940506}
   - component: {fileID: 223369995439940505}
   m_Layer: 0
-  m_Name: RoomTiles_2 (6)
+  m_Name: UpLeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3019,7 +2767,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 33
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369995439940505
 SpriteRenderer:
@@ -3084,7 +2832,7 @@ GameObject:
   - component: {fileID: 223369995528903687}
   - component: {fileID: 223369995528903680}
   m_Layer: 0
-  m_Name: RoomTiles_1 (13)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3168,7 +2916,7 @@ GameObject:
   - component: {fileID: 223369995552284162}
   - component: {fileID: 223369995552284163}
   m_Layer: 0
-  m_Name: RoomTiles_2 (2)
+  m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3187,7 +2935,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 22
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369995552284163
 SpriteRenderer:
@@ -3252,7 +3000,7 @@ GameObject:
   - component: {fileID: 223369995725774914}
   - component: {fileID: 223369995725774913}
   m_Layer: 0
-  m_Name: RoomTiles_3 (8)
+  m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3271,7 +3019,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 44
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369995725774913
 SpriteRenderer:
@@ -3336,7 +3084,7 @@ GameObject:
   - component: {fileID: 223369995763752437}
   - component: {fileID: 223369995763752436}
   m_Layer: 0
-  m_Name: RoomTiles_1 (18)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3355,7 +3103,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 37
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369995763752436
 SpriteRenderer:
@@ -3420,7 +3168,7 @@ GameObject:
   - component: {fileID: 223369995946215075}
   - component: {fileID: 223369995946215100}
   m_Layer: 0
-  m_Name: RoomTiles_3 (2)
+  m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3439,7 +3187,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 18
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369995946215100
 SpriteRenderer:
@@ -3504,7 +3252,7 @@ GameObject:
   - component: {fileID: 223369995965587468}
   - component: {fileID: 223369995965587699}
   m_Layer: 0
-  m_Name: RoomTiles_3 (4)
+  m_Name: UpRightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3523,7 +3271,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 27
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369995965587699
 SpriteRenderer:
@@ -3588,7 +3336,7 @@ GameObject:
   - component: {fileID: 223369996054880657}
   - component: {fileID: 223369996054880656}
   m_Layer: 0
-  m_Name: RoomTiles_2 (4)
+  m_Name: UpLeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3607,7 +3355,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 31
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369996054880656
 SpriteRenderer:
@@ -3672,7 +3420,7 @@ GameObject:
   - component: {fileID: 223369996070767460}
   - component: {fileID: 223369996070767461}
   m_Layer: 0
-  m_Name: RoomTiles_1 (6)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3756,7 +3504,7 @@ GameObject:
   - component: {fileID: 223369996083111052}
   - component: {fileID: 223369996083111795}
   m_Layer: 0
-  m_Name: RoomTiles_3 (5)
+  m_Name: UpRightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3775,7 +3523,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 28
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369996083111795
 SpriteRenderer:
@@ -3840,7 +3588,7 @@ GameObject:
   - component: {fileID: 223369996138276013}
   - component: {fileID: 223369996138276014}
   m_Layer: 0
-  m_Name: RoomTiles_3
+  m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3859,7 +3607,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 16
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369996138276014
 SpriteRenderer:
@@ -3957,25 +3705,6 @@ Transform:
   - {fileID: 223369995528903687}
   - {fileID: 223369994967092407}
   - {fileID: 223369994236919163}
-  - {fileID: 223369996138276013}
-  - {fileID: 223369994943087508}
-  - {fileID: 223369995946215075}
-  - {fileID: 223369994360563156}
-  - {fileID: 223369994219611330}
-  - {fileID: 223369994638018179}
-  - {fileID: 223369995552284162}
-  - {fileID: 223369995106583593}
-  - {fileID: 223369994415127050}
-  - {fileID: 223369994417880749}
-  - {fileID: 223369994910753788}
-  - {fileID: 223369995965587468}
-  - {fileID: 223369996083111052}
-  - {fileID: 223369996176796754}
-  - {fileID: 223369994430318439}
-  - {fileID: 223369996054880657}
-  - {fileID: 223369994993290028}
-  - {fileID: 223369995439940506}
-  - {fileID: 223369995092156450}
   - {fileID: 223369995384765363}
   - {fileID: 223369994210615991}
   - {fileID: 223369995763752437}
@@ -3985,9 +3714,25 @@ Transform:
   - {fileID: 223369994687585216}
   - {fileID: 223369994266042407}
   - {fileID: 223369996242869635}
+  - {fileID: 223369996138276013}
+  - {fileID: 223369994943087508}
+  - {fileID: 223369995946215075}
+  - {fileID: 223369994360563156}
   - {fileID: 223369995725774914}
+  - {fileID: 223369994219611330}
+  - {fileID: 223369994638018179}
+  - {fileID: 223369995552284162}
+  - {fileID: 223369995106583593}
   - {fileID: 223369994717147765}
+  - {fileID: 223369995965587468}
+  - {fileID: 223369996083111052}
+  - {fileID: 223369996176796754}
+  - {fileID: 223369994430318439}
   - {fileID: 223369994691666724}
+  - {fileID: 223369996054880657}
+  - {fileID: 223369994993290028}
+  - {fileID: 223369995439940506}
+  - {fileID: 223369995092156450}
   - {fileID: 223369994509597464}
   m_Father: {fileID: 223369994367425670}
   m_RootOrder: 0
@@ -4003,7 +3748,7 @@ GameObject:
   - component: {fileID: 223369996176796754}
   - component: {fileID: 223369996176796753}
   m_Layer: 0
-  m_Name: RoomTiles_3 (6)
+  m_Name: UpRightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4022,7 +3767,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 29
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369996176796753
 SpriteRenderer:
@@ -4087,7 +3832,7 @@ GameObject:
   - component: {fileID: 223369996242869635}
   - component: {fileID: 223369996242869634}
   m_Layer: 0
-  m_Name: RoomTiles_1 (24)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4106,7 +3851,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 223369996145679528}
-  m_RootOrder: 43
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &223369996242869634
 SpriteRenderer:
