@@ -33,7 +33,7 @@ public class MusicController : MonoBehaviour
     {
         audio.Pause();
         audio.volume = cutsceneSoundVolume;
-        yield return new WaitForSeconds(2.2f);
+        yield return new WaitForSeconds(2);
         audio.clip = cutsceneSound;
         audio.Play();
     }

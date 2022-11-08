@@ -14,6 +14,8 @@ public class Screens : MonoBehaviour
     public int[] spritesPerFlashback;
     public Sprite[] memorySprites;
     public float transitionSpeed;
+    public float timePerImage;
+    public float timeInBlackScreen;
 
     public void CallFlashback()
     {
@@ -28,9 +30,9 @@ public class Screens : MonoBehaviour
         for (int i = 0; i < spritesPerFlashback[flashbackNumber]; i++)
         {
             flashback.sprite = memorySprites[currentMemorySprite];
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(timeInBlackScreen);
             yield return TransitionFadeOut();
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(timePerImage);
             yield return TransitionFadeIn();
             currentMemorySprite++;
         }
