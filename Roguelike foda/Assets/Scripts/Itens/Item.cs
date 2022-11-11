@@ -13,10 +13,15 @@ public class Item : MonoBehaviour
     public int timesToCallResult = 1;
     public int amount;
 
-    private void Start()
+    public enum AmountType
     {
-        entity = GetComponentInParent<BattleEntity>();
+        none = 0,
+        integer,
+        percenterOfMyMaxHealth,
+        percenterOfMyAttackValue
     }
+
+    public AmountType amountType;
 
     public enum Results
     {
@@ -26,8 +31,17 @@ public class Item : MonoBehaviour
 
     public Results result;
 
+    private void Start()
+    {
+        entity = GetComponentInParent<BattleEntity>();
+    }
+
     public void Action()
     {
+        if (entity == null)
+        {
+            return;
+        }
         timesEventWasListen++;
         if (timesEventWasListen >= timesToCallResult)
         {
@@ -36,7 +50,7 @@ public class Item : MonoBehaviour
                 case Results.none:
                     break;
                 case Results.heal:
-                    entity.StartCoroutine("Heal", amount);
+                    entity.StartCoroutine("Heal", CalculateAmount());
                     break;
                 default:
                     break;
@@ -45,11 +59,33 @@ public class Item : MonoBehaviour
         }
     }
 
-    public void CheckWhoAttacked()
+    public void CheckIfIAttacked()
     {
         if (Attacker.Value == transform.parent.gameObject)
         {
             Action();
         }
+    }
+
+    public int CalculateAmount()
+    {
+        int value = 0;
+        switch (amountType)
+        {
+            case AmountType.none:
+                break;
+            case AmountType.integer:
+                value = amount;
+                break;
+            case AmountType.percenterOfMyMaxHealth:
+                value = Mathf.FloorToInt(entity.maxHealth * amount * 0.01f);
+                break;
+            case AmountType.percenterOfMyAttackValue:
+                value = Mathf.FloorToInt(entity.DamageVariable.Value * amount * 0.01f);
+                break;
+            default:
+                break;
+        }
+        return value;
     }
 }

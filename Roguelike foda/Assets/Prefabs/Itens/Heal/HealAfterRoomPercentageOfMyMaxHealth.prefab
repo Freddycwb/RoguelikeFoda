@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6576996229887442745}
   - component: {fileID: 6576996229887442747}
   m_Layer: 0
-  m_Name: BlackSoup
+  m_Name: HealAfterRoomPercentageOfMyMaxHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,8 +48,9 @@ MonoBehaviour:
   timesEventWasListen: 0
   Attacker: {fileID: 11400000, guid: 07df781feb8ad6d46803dd9155c9cfbe, type: 2}
   timesToCallResult: 1
-  amount: 0
-  result: 0
+  amount: 20
+  amountType: 2
+  result: 1
 --- !u!114 &6576996229887442747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c4d6af8d7532e24b815ade81e26270b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 0}
+  Event: {fileID: 11400000, guid: 4f04c2476c1f7724face978f355bd89d, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:

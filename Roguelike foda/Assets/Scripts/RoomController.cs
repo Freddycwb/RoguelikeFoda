@@ -103,11 +103,11 @@ public class RoomController : MonoBehaviour
     {
         switch (roomNumber)
         {
-            case 0:
+            case 5:
                 roomOfDoor1 = RoomType.bossRoom;
                 roomOfDoor2 = RoomType.bossRoom;
                 break;
-            case 5:
+            case 11:
                 roomOfDoor1 = RoomType.bossRoom;
                 roomOfDoor2 = RoomType.bossRoom;
                 break;

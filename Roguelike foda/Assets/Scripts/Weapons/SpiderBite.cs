@@ -12,8 +12,20 @@ public class SpiderBite : MonoBehaviour, Weapon
         }
     }
 
+    private GameEvent StartAttack;
+    private IntVariable DamageVariable;
+
     IEnumerator Weapon.Attack(List<BattleEntity> enemies)
     {
-        yield return enemies[0].StartCoroutine("TakeDamage", attackValue);
+        DamageVariable.Value = attackValue;
+        StartAttack.Raise();
+        yield return new WaitForEndOfFrame();
+        yield return enemies[0].StartCoroutine("TakeDamage", DamageVariable.Value);
+    }
+
+    private void OnEnable()
+    {
+        StartAttack = GetComponentInParent<BattleEntity>().StartAttack;
+        DamageVariable = GetComponentInParent<BattleEntity>().DamageVariable;
     }
 }

@@ -6,6 +6,8 @@ public class BattleEntity : MonoBehaviour
 {
     public int maxHealth;
     public Weapon weapon;
+    public GameEvent StartAttack;
+    public IntVariable DamageVariable;
 
     private WaveMovement waveMovement;
     [SerializeField]
@@ -23,7 +25,7 @@ public class BattleEntity : MonoBehaviour
     public IEnumerator TakeDamage(int damage)
     {
         currentHealth -= damage;
-        PlayDamageSound();
+        //PlayDamageSound();
         yield return waveMovement.StartCoroutine("Play");
         if (currentHealth <= 0)
         {
@@ -50,7 +52,7 @@ public class BattleEntity : MonoBehaviour
     public IEnumerator Death()
     {
         yield return new WaitForSeconds(0.25f);
-        Instantiate(deathSound);
+        //Instantiate(deathSound);
         gameObject.SetActive(false);
         yield return new WaitForEndOfFrame();
     }

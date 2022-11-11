@@ -58,7 +58,7 @@ public class Buttons : MonoBehaviour
     {
         if (gameOver || locked) return;
         NoButtons();
-        Instantiate(doorSound);
+        //Instantiate(doorSound);
         door1Btn.SetActive(true);
         door2Btn.SetActive(true);
     }

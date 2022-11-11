@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
+  StartAttack: {fileID: 11400000, guid: c98330d56967d564d8db89c1d22573a5, type: 2}
+  DamageVariable: {fileID: 11400000, guid: a086fa7e615e10a4dba0ec3e827715fc, type: 2}
   currentHealth: 0
   damageSounds:
   - {fileID: 2390914445852127848, guid: f2807451032db2a49b935ad0e9db1adf, type: 3}
@@ -119,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b011f213a77d646b42242940a35a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DamageVariable: {fileID: 0}
 --- !u!114 &8567646701643230081
 MonoBehaviour:
   m_ObjectHideFlags: 0
