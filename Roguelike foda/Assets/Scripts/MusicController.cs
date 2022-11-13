@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MusicController : MonoBehaviour
 {
-    private AudioSource audio;
+    private AudioSource source;
 
     public AudioClip music;
     public AudioClip cutsceneSound;
@@ -14,7 +14,7 @@ public class MusicController : MonoBehaviour
 
     private void Start()
     {
-        audio = GetComponent<AudioSource>();    
+        source = GetComponent<AudioSource>();    
     }
 
     public void CallCutsceneSounds()
@@ -24,17 +24,17 @@ public class MusicController : MonoBehaviour
 
     public void PlayMusic()
     {
-        audio.clip = music;
-        audio.volume = musicVolume;
-        audio.Play();
+        source.clip = music;
+        source.volume = musicVolume;
+        source.Play();
     }
 
     public IEnumerator CutsceneSounds()
     {
-        audio.Pause();
-        audio.volume = cutsceneSoundVolume;
+        source.Pause();
+        source.volume = cutsceneSoundVolume;
         yield return new WaitForSeconds(2);
-        audio.clip = cutsceneSound;
-        audio.Play();
+        source.clip = cutsceneSound;
+        source.Play();
     }
 }

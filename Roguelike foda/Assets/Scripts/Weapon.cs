@@ -4,7 +4,9 @@ using UnityEngine;
 
 public interface Weapon
 {
-    public int attackValue{ get; }
+    public BattleEntity Target { get; }
+    public int AttackValue { get; }
+    public int AdditionalDamage { get; set; }
 
     public IEnumerator Attack(List<BattleEntity> enemies)
     {

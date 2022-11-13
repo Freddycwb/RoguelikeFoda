@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9168073174885188626}
   - component: {fileID: 9168073174885188627}
   - component: {fileID: 1440787258254362437}
+  - component: {fileID: -4698457403054550462}
   - component: {fileID: 9168073174885188652}
   m_Layer: 0
   m_Name: Player
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 7482667652216324306, guid: 41801e6b86fd183469193e007a5b23c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac208a2a510f6ac45b37008cb24aaeca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,8 +103,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   StartAttack: {fileID: 11400000, guid: c98330d56967d564d8db89c1d22573a5, type: 2}
+  EntityDied: {fileID: 11400000, guid: 8d341f77a867c524480a5d933fe983ea, type: 2}
   DamageVariable: {fileID: 11400000, guid: a086fa7e615e10a4dba0ec3e827715fc, type: 2}
+  enemies: []
+  entityHud: {fileID: 0}
+  idleMovement: {fileID: 0}
   currentHealth: 0
+  entityHudPrefab: {fileID: 5898489109225283329, guid: 557b0f966f0d827478afe05a50bcb787, type: 3}
   damageSounds:
   - {fileID: 2390914445852127848, guid: f2807451032db2a49b935ad0e9db1adf, type: 3}
   - {fileID: 2390914445852127848, guid: f0f1fb71edbeeb847bf33dcc87d4b8a8, type: 3}
@@ -134,6 +140,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 10
+--- !u!114 &-4698457403054550462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9168073174885188653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d2bad3d47270c46a9245c1b2691e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.05
+  frequency: 1
+  stopped: 0
 --- !u!114 &9168073174885188652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,7 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845787c76c063174b987ab529a566a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alwaysActive: 0
   moveX: 1
-  moveTime: 0.5
+  moveTime: 0.275
   amplitude: 0.2
   frequency: 10
