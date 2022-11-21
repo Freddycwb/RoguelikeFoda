@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdcfef16fbf2e2946940010eb2237be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  representation: {fileID: 21300000, guid: 9aba589f7fd379c4db36f1b7e00cf42c, type: 3}
+  representation: {fileID: 21300000, guid: 1d86da77fac90fc4ca6963d8ee9cf4fb, type: 3}
   description: Dobra o dano do ataque do jogador a cada 3 golpes
   Attacker: {fileID: 11400000, guid: 07df781feb8ad6d46803dd9155c9cfbe, type: 2}
   executeActionOnEnabled: 0

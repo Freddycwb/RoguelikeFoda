@@ -45,13 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdcfef16fbf2e2946940010eb2237be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  representation: {fileID: 21300000, guid: 6582292b1e64cd643b3eea2efd2148cc, type: 3}
+  representation: {fileID: 21300000, guid: a132a25a863c2df4db9b2ebf68b68b5b, type: 3}
   description: A cada 4 ataques recebidos reflete o dano devolta para o atacante
   Attacker: {fileID: 11400000, guid: 07df781feb8ad6d46803dd9155c9cfbe, type: 2}
   executeActionOnEnabled: 0
   timesToCallResult: 4
-  amount: 100
-  amountType: 5
+  amount: 200
+  amountType: 3
   result: 8
 --- !u!114 &6576996229887442747
 MonoBehaviour:

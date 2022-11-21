@@ -101,9 +101,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aefb6bd1e890d64c8cb8b92fb34877b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastDead: {fileID: 11400000, guid: d331b0fac3cb8924a91c7f75d91d7cc3, type: 2}
   maxHealth: 10
   StartAttack: {fileID: 11400000, guid: c98330d56967d564d8db89c1d22573a5, type: 2}
   EntityDied: {fileID: 11400000, guid: 8d341f77a867c524480a5d933fe983ea, type: 2}
+  XpUpdate: {fileID: 11400000, guid: 85ebe97e06e137c42a082775adb6b544, type: 2}
   DamageVariable: {fileID: 11400000, guid: a086fa7e615e10a4dba0ec3e827715fc, type: 2}
   enemies: []
   entityHud: {fileID: 0}
@@ -115,6 +117,9 @@ MonoBehaviour:
   - {fileID: 2390914445852127848, guid: f0f1fb71edbeeb847bf33dcc87d4b8a8, type: 3}
   - {fileID: 2390914445852127848, guid: 17fa81c53849d144f8b5be0b266b105d, type: 3}
   deathSound: {fileID: 2390914445852127848, guid: 0f6e29c5b8fbe6547a381994164be47d, type: 3}
+  level: 0
+  xp: 130
+  xpToLevelUp: 1000000
 --- !u!114 &-4779684655169123827
 MonoBehaviour:
   m_ObjectHideFlags: 0

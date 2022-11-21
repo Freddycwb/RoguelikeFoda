@@ -15,7 +15,7 @@ public class SnakeBite : MonoBehaviour, Weapon
     {
         get
         {
-            return 5;
+            return 4;
         }
     }
 

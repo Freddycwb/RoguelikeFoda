@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdcfef16fbf2e2946940010eb2237be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  representation: {fileID: 21300000, guid: e497b313ae92da642945ac15a1dad221, type: 3}
+  representation: {fileID: 21300000, guid: 4d41ce325cbfe464181ce7271c08c71c, type: 3}
   description: Aumenta a vida maxima em 3 para cada item equipado
   Attacker: {fileID: 11400000, guid: 07df781feb8ad6d46803dd9155c9cfbe, type: 2}
   executeActionOnEnabled: 1

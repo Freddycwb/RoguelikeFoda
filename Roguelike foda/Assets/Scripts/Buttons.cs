@@ -27,10 +27,15 @@ public class Buttons : MonoBehaviour
 
     public TextMeshPro itemName;
     public TextMeshPro itemDescription;
+    public TextMeshPro level;
+
+    public GameObjectVariable Player;
 
     public Image[] itemSlot;
     public string[] itemSlotDescription;
     public int itensEquipped;
+
+    public Screens screens;
 
     public GameObject doorSound;
 
@@ -42,13 +47,49 @@ public class Buttons : MonoBehaviour
     public void Door1Pressed()
     {
         NoButtons();
-        door1Pressed.Raise();
+        StartCoroutine("GoToDoor1");
     }
 
     public void Door2Pressed()
     {
         NoButtons();
+        StartCoroutine("GoToDoor2");
+    }
+
+    public IEnumerator GoToDoor1()
+    {
+        Player.Value.GetComponent<SpriteRenderer>().flipX = true;
+        if (Player.Value.transform.position.x < 0)
+        {
+            yield return Player.Value.GetComponent<BattleEntity>().Movement(new Vector3(-3.2f, 1.6f, 0), 4.5f);
+        }
+        else
+        {
+            yield return Player.Value.GetComponent<BattleEntity>().Movement(new Vector3(-3.2f, 1.6f, 0), 7);
+        }
+        yield return screens.StartCoroutine("TransitionFadeIn");
+        door1Pressed.Raise();
+        Player.Value.transform.position = new Vector3(3.2f, -1.6f, 0);
+        Player.Value.GetComponent<BattleEntity>().entityHud.transform.position = Player.Value.transform.position;
+        screens.StartCoroutine("TransitionFadeOut");
+    }
+
+    public IEnumerator GoToDoor2()
+    {
+        Player.Value.GetComponent<SpriteRenderer>().flipX = false;
+        if (Player.Value.transform.position.x < 0)
+        {
+            yield return Player.Value.GetComponent<BattleEntity>().Movement(new Vector3(3.2f, 1.6f, 0), 7);
+        }
+        else
+        {
+            yield return Player.Value.GetComponent<BattleEntity>().Movement(new Vector3(3.2f, 1.6f, 0), 4.5f);
+        }
+        yield return screens.StartCoroutine("TransitionFadeIn");
         door2Pressed.Raise();
+        Player.Value.transform.position = new Vector3(-3.2f, -1.6f, 0);
+        Player.Value.GetComponent<BattleEntity>().entityHud.transform.position = Player.Value.transform.position;
+        screens.StartCoroutine("TransitionFadeOut");
     }
 
     public void Item1Pressed()
@@ -176,6 +217,7 @@ public class Buttons : MonoBehaviour
         {
             item.gameObject.SetActive(false);
         }
+        level.gameObject.SetActive(false);
     }
 
     public void ShowAllItens()
@@ -187,6 +229,7 @@ public class Buttons : MonoBehaviour
                 item.gameObject.SetActive(true);
             }
         }
+        level.gameObject.SetActive(true);
     }
 
     private void Update()
@@ -203,5 +246,10 @@ public class Buttons : MonoBehaviour
             itemName.color = new Color(itemName.color.r, itemName.color.g, itemName.color.b, count);
             itemDescription.color = new Color(itemDescription.color.r, itemDescription.color.g, itemDescription.color.b, count);
         }
+    }
+
+    public void UpdateLevel()
+    {
+        level.text = "Lv " + Player.Value.GetComponent<BattleEntity>().level.ToString() + " \r\n" + Player.Value.GetComponent<BattleEntity>().xp.ToString() + "/" + Player.Value.GetComponent<BattleEntity>().xpToLevelUp.ToString();
     }
 }

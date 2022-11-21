@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class BattleEntity : MonoBehaviour
 {
+    public GameObjectVariable lastDead;
     public int maxHealth;
     public Weapon weapon;
     public GameEvent StartAttack;
     public GameEvent EntityDied;
+    public GameEvent XpUpdate;
     public IntVariable DamageVariable;
     [HideInInspector]
     public List<BattleEntity> enemies;
@@ -20,6 +22,10 @@ public class BattleEntity : MonoBehaviour
     public GameObject entityHudPrefab;
     public GameObject[] damageSounds;
     public GameObject deathSound;
+
+    public int level;
+    public int xp;
+    public int xpToLevelUp = 100;
 
     void Start()
     {
@@ -52,7 +58,7 @@ public class BattleEntity : MonoBehaviour
 
     public IEnumerator Heal(int amount)
     {
-        if (amount <= 0 || currentHealth == maxHealth)
+        if (amount <= 0 || currentHealth == maxHealth || currentHealth <= 0)
         {
             yield break;
         }
@@ -77,6 +83,7 @@ public class BattleEntity : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         Instantiate(deathSound);
+        lastDead.Value = gameObject;
         EntityDied.Raise();
         gameObject.SetActive(false);
         yield return new WaitForEndOfFrame();
@@ -86,5 +93,25 @@ public class BattleEntity : MonoBehaviour
     {
         int r = Random.Range(0, damageSounds.Length);
         Instantiate(damageSounds[r]);
+    }
+
+    public void IncreaseXP(int amount)
+    {
+        xp += amount;
+        if (xp >= xpToLevelUp)
+        {
+            LevelUp();
+        }
+        XpUpdate.Raise();
+    }
+
+    public void LevelUp()
+    {
+        maxHealth += 5;
+        StartCoroutine("Heal", 5);
+        xp -= xpToLevelUp;
+        level += 1;
+        xpToLevelUp += 30 * level;
+        GetComponent<Sword>().level += 1;
     }
 }

@@ -8,6 +8,9 @@ public class BossDeath : MonoBehaviour
 
     private void OnDisable()
     {
-        Instantiate(flashbackFragment, transform.position, transform.rotation);
+        if(GetComponent<BattleEntity>().currentHealth <= 0)
+        {
+            Instantiate(flashbackFragment, transform.position, transform.rotation);
+        }
     }
 }

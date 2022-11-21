@@ -34,6 +34,7 @@ public class WaveMovement : MonoBehaviour
 
     public IEnumerator Play()
     {
+        posOffset = transform.position;
         float currentMoveTime = 0;
         while (currentMoveTime <= moveTime)
         {

@@ -15,7 +15,7 @@ public class Sword : MonoBehaviour, Weapon
     {
         get
         {
-            return 3;
+            return 3 + level;
         }
     }
 
@@ -31,6 +31,7 @@ public class Sword : MonoBehaviour, Weapon
         }
     }
 
+    public int level;
     private int additionalDamage;
     private BattleEntity entity;
     private BattleEntity target;
@@ -43,7 +44,7 @@ public class Sword : MonoBehaviour, Weapon
         {
             if (e.currentHealth > 0)
             {
-                target = enemies[0];
+                target = e;
                 break;
             }
         }

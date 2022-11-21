@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdcfef16fbf2e2946940010eb2237be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  representation: {fileID: 21300000, guid: 14a27b297ed02af49b67e246e1d8f483, type: 3}
+  representation: {fileID: 21300000, guid: 044d4cc7b78072f49bd6bb0ef52183b2, type: 3}
   description: Acrescenta 1 de dano ao ataque do jogador a cada turno, O dano acrescentado
     volta a 0 ao trocar de sala
   Attacker: {fileID: 11400000, guid: 07df781feb8ad6d46803dd9155c9cfbe, type: 2}

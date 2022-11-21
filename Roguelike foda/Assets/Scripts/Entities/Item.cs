@@ -73,22 +73,19 @@ public class Item : MonoBehaviour
                     break;
                 case Results.increaseMaxHealth:
                     entity.maxHealth += amount;
-                    entity.entityHud.UpdateHP();
+                    entity.StartCoroutine("Heal", amount);
                     break;
                 case Results.increaseMaxHealthByItens:
-                    Debug.Log("increaseMaxHealth");
                     if (executeActionOnEnabled)
                     {
-                        Debug.Log("onEnabled");
                         entity.maxHealth += amount * entity.transform.childCount;
-                        entity.entityHud.UpdateHP();
+                        entity.StartCoroutine("Heal", amount * entity.transform.childCount);
                         executeActionOnEnabled = false;
                     }
                     else
                     {
-                        Debug.Log("newItem");
                         entity.maxHealth += amount;
-                        entity.entityHud.UpdateHP();
+                        entity.StartCoroutine("Heal", amount);
                     }
                     break;
                 case Results.hitAllEnemies:
@@ -213,7 +210,7 @@ public class Item : MonoBehaviour
                 value = Mathf.FloorToInt(entity.weapon.Target.currentHealth * -1 * amount * 0.01f);
                 break;
             case AmountType.percenterOfEnemyAttackValue:
-                value = Mathf.FloorToInt(entity.weapon.AttackValue * amount * 0.01f);
+                value = Mathf.FloorToInt(Attacker.Value.GetComponent<BattleEntity>().weapon.AttackValue * amount * 0.01f);
                 break;
             default:
                 break;

@@ -49,6 +49,14 @@ public class Room : MonoBehaviour
             enemiesGameObject.Add(a.gameObject);
             a.transform.SetParent(transform);
         }
+        if (cameFromRight)
+        {
+            foreach (var e in enemiesGameObject)
+            {
+                e.transform.position += Vector3.left * e.transform.position.x * 2;
+                e.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
     }
 
     public void CreateAttackItens()

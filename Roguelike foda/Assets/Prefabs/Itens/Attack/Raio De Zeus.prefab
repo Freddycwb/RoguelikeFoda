@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdcfef16fbf2e2946940010eb2237be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  representation: {fileID: 21300000, guid: 792afce3d6df61b4894bddec2c8db0e0, type: 3}
+  representation: {fileID: 21300000, guid: 6cd53671d1ce87a4bb30dfba124d0b6b, type: 3}
   description: Todos os inimigos recebem 1 de dano a cada ataque do jogador
   Attacker: {fileID: 11400000, guid: 07df781feb8ad6d46803dd9155c9cfbe, type: 2}
   executeActionOnEnabled: 0

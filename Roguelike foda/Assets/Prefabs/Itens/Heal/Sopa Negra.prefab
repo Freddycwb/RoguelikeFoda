@@ -46,12 +46,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   representation: {fileID: 21300000, guid: 5fd0dbb2fb05dae48b50035e5e63f763, type: 3}
-  description: A cada 3 ataques do jogador recupera 5 de vida
+  description: A cada 2 ataques do jogador, converte todo o dano em vida
   Attacker: {fileID: 11400000, guid: 07df781feb8ad6d46803dd9155c9cfbe, type: 2}
   executeActionOnEnabled: 0
-  timesToCallResult: 3
-  amount: 5
-  amountType: 1
+  timesToCallResult: 2
+  amount: 100
+  amountType: 3
   result: 1
 --- !u!114 &6576996229887442747
 MonoBehaviour:

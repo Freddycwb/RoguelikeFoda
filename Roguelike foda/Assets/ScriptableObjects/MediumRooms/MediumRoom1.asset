@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeveloperDescription: 
   Value:
-  - {fileID: 525140213630337633, guid: 9e01c10e04136ec4c9184e4c54c6686f, type: 3}
+  - {fileID: 4080178347081507452, guid: 11a8fc9b8fd7cc94db7c79e3d6318a3f, type: 3}
+  - {fileID: 525140213630337633, guid: 39a563bcc74ce1a42b545057691262b5, type: 3}
+  - {fileID: 4080178347081507452, guid: 11a8fc9b8fd7cc94db7c79e3d6318a3f, type: 3}
   - {fileID: 525140213630337633, guid: 39a563bcc74ce1a42b545057691262b5, type: 3}
   PersistBetweenScenes: 0

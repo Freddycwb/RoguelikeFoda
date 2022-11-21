@@ -15,7 +15,7 @@ public class AthenasSword : MonoBehaviour, Weapon
     {
         get
         {
-            return 10;
+            return 7;
         }
     }
 

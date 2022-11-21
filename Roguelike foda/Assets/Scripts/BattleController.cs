@@ -14,6 +14,7 @@ public class BattleController : MonoBehaviour
     public GameEvent PlayerDeath;
     public GameObjectVariable Player;
     public GameObjectVariable Attacker;
+    public GameObjectVariable LastDead;
     public GameObjectVariable CurrentRoom;
     public List<BattleEntity> enemies = new List<BattleEntity>();
 
@@ -36,7 +37,7 @@ public class BattleController : MonoBehaviour
     public IEnumerator Turn()
     {
         StartTurn.Raise();
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.75f);
         if (!battling)
         {
             yield break;
@@ -46,7 +47,7 @@ public class BattleController : MonoBehaviour
         {
             yield break;
         }
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1.25f);
         yield return StartCoroutine("EnemysAction");
         EndTurn.Raise();
     }
@@ -56,7 +57,14 @@ public class BattleController : MonoBehaviour
         Attacker.Value = player.gameObject;
         Vector3 lastPos = player.transform.position;
         player.idleMovement.stopped = true;
-        yield return player.Movement(lastPos + (Vector3.right * 0.8f) + (Vector3.up * 0.4f), 7);
+        if (CurrentRoom.Value.GetComponent<Room>().cameFromRight)
+        {
+            yield return player.Movement(lastPos + (Vector3.left * 0.8f) + (Vector3.up * 0.4f), 7);
+        }
+        else
+        {
+            yield return player.Movement(lastPos + (Vector3.right * 0.8f) + (Vector3.up * 0.4f), 7);
+        }
         yield return new WaitForSeconds(0.1f);
         if (battling)
         {
@@ -87,7 +95,14 @@ public class BattleController : MonoBehaviour
             Attacker.Value = e.gameObject;
             Vector3 lastPos = e.transform.position;
             e.idleMovement.stopped = true;
-            yield return e.Movement(lastPos + (Vector3.left * 0.8f) + (Vector3.down * 0.4f), 7);
+            if (CurrentRoom.Value.GetComponent<Room>().cameFromRight)
+            {
+                yield return e.Movement(lastPos + (Vector3.right * 0.8f) + (Vector3.down * 0.4f), 7);
+            }
+            else
+            {
+                yield return e.Movement(lastPos + (Vector3.left * 0.8f) + (Vector3.down * 0.4f), 7);
+            }
             yield return new WaitForSeconds(0.1f);
             yield return e.weapon.Attack(p);
             yield return new WaitForSeconds(0.1f);
@@ -101,6 +116,7 @@ public class BattleController : MonoBehaviour
     
     public void CheckEndBattle()
     {
+        player.IncreaseXP(LastDead.Value.GetComponent<BattleEntity>().xp);
         if (player.currentHealth <= 0)
         {
             PlayerDeath.Raise();

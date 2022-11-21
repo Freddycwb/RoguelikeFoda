@@ -42,6 +42,8 @@ public class RoomController : MonoBehaviour
     public int roomNumber;
     public int bossDefeated;
 
+    public bool cameFromRight;
+
     void Start()
     {
         Restart();
@@ -49,11 +51,13 @@ public class RoomController : MonoBehaviour
 
     public void EnterDoor1()
     {
+        cameFromRight = true;
         CreateRoom(roomOfDoor1);
     }
 
     public void EnterDoor2()
     {
+        cameFromRight = false;
         CreateRoom(roomOfDoor2);
     }
 
@@ -100,6 +104,7 @@ public class RoomController : MonoBehaviour
         var a = Instantiate(roomPrefab);
         Room r = a.GetComponent<Room>();
         r.enemiesOrder = rooms[Random.Range(0, rooms.Count)].Value;
+        r.cameFromRight = cameFromRight;
         r.CreateEnemies();
         CurrentRoom.Value = a;
         StartBattle.Raise();
@@ -110,6 +115,7 @@ public class RoomController : MonoBehaviour
         var a = Instantiate(roomPrefab);
         Room r = a.GetComponent<Room>();
         r.enemiesOrder = rooms[bossDefeated].Value;
+        r.cameFromRight = cameFromRight;
         r.CreateEnemies();
         CurrentRoom.Value = a;
         bossDefeated++;

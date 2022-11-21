@@ -62,4 +62,9 @@ public class Screens : MonoBehaviour
         }
         EndTransition.Raise();
     }
+
+    public void ResetFlashback()
+    {
+        currentMemorySprite = 0;
+    }
 }

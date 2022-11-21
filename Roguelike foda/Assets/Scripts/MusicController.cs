@@ -7,7 +7,7 @@ public class MusicController : MonoBehaviour
     private AudioSource source;
 
     public AudioClip music;
-    public AudioClip cutsceneSound;
+    //public AudioClip cutsceneSound;
 
     public float musicVolume;
     public float cutsceneSoundVolume;
@@ -34,7 +34,7 @@ public class MusicController : MonoBehaviour
         source.Pause();
         source.volume = cutsceneSoundVolume;
         yield return new WaitForSeconds(2);
-        source.clip = cutsceneSound;
-        source.Play();
+        //source.clip = cutsceneSound;
+        //source.Play();
     }
 }

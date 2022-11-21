@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdcfef16fbf2e2946940010eb2237be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  representation: {fileID: 21300000, guid: 4dc20f64874a3c249b0f10a4fa123e33, type: 3}
+  representation: {fileID: 21300000, guid: c1919c33ac46f7d479bbbe336bfcbfb1, type: 3}
   description: A cada ataque do jogador converte 35% do dano em vida
   Attacker: {fileID: 11400000, guid: 07df781feb8ad6d46803dd9155c9cfbe, type: 2}
   executeActionOnEnabled: 0
