@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Screens : MonoBehaviour
 {
     public GameEvent EndTransition;
+    public GameEvent StartFlashback;
     public GameEvent EndFlashback;
     public Image flashback;
     public Image transition;
@@ -14,8 +15,13 @@ public class Screens : MonoBehaviour
     public int[] spritesPerFlashback;
     public Sprite[] memorySprites;
     public float transitionSpeed;
-    public float timePerImage;
+    public float[] timePerImage;
     public float timeInBlackScreen;
+
+    private void Start()
+    {
+        StartFlashback.Raise();
+    }
 
     public void CallFlashback()
     {
@@ -32,7 +38,7 @@ public class Screens : MonoBehaviour
             flashback.sprite = memorySprites[currentMemorySprite];
             yield return new WaitForSeconds(timeInBlackScreen);
             yield return TransitionFadeOut();
-            yield return new WaitForSeconds(timePerImage);
+            yield return new WaitForSeconds(timePerImage[currentMemorySprite]);
             yield return TransitionFadeIn();
             currentMemorySprite++;
         }

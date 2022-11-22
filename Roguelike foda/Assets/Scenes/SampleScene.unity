@@ -4771,7 +4771,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cad788b480b60864abca4f5947f90503, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -4870,7 +4870,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: {fileID: 8300000, guid: cad788b480b60864abca4f5947f90503, type: 3}
-  musicVolume: 0.3
+  cutsceneSound: {fileID: 8300000, guid: 75a60f8e5fb01384b9b2e81667b1f61d, type: 3}
+  musicVolume: 1
   cutsceneSoundVolume: 1
 --- !u!4 &1694804735
 Transform:
@@ -5413,12 +5414,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EndTransition: {fileID: 11400000, guid: 8dcd4657c53110941964c9c4b2ce525d, type: 2}
+  StartFlashback: {fileID: 11400000, guid: aaf0b0c74074e63479011ce5d948730d, type: 2}
   EndFlashback: {fileID: 11400000, guid: 90c00ddcc4c48684c9d2589220e63982, type: 2}
   flashback: {fileID: 1819532965}
   transition: {fileID: 1621367879}
   currentMemorySprite: 0
   flashbackNumber: 0
-  spritesPerFlashback: 0700000006000000010000000c00000002000000
+  spritesPerFlashback: 030000000700000006000000010000000c00000002000000
   memorySprites:
   - {fileID: 21300000, guid: ee15299af47bb264d94ce2355e1f39f1, type: 3}
   - {fileID: 21300000, guid: 4a0f37f67619d5342bf26d8975855f4d, type: 3}
@@ -5459,7 +5461,45 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 93d911f0569ccce45a4815f63b7a3740, type: 3}
   - {fileID: 21300000, guid: 24b6b500a94a98045958956aa211fbca, type: 3}
   transitionSpeed: 1
-  timePerImage: 1
+  timePerImage:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
   timeInBlackScreen: 0.5
 --- !u!114 &1764390297
 MonoBehaviour:
@@ -5939,7 +5979,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819532963}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
