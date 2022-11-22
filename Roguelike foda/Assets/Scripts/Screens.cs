@@ -71,6 +71,6 @@ public class Screens : MonoBehaviour
 
     public void ResetFlashback()
     {
-        currentMemorySprite = 0;
+        currentMemorySprite = 5;
     }
 }
